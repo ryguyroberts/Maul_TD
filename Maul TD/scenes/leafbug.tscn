@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://b86um3075677"]
+[gd_scene load_steps=28 format=3 uid="uid://b86um3075677"]
 
+[ext_resource type="Script" path="res://scripts/leafbug.gd" id="1_h7ym1"]
 [ext_resource type="Texture2D" uid="uid://kut0w264m3wl" path="res://assets/Leafbug.png" id="1_x6c7p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo00q"]
@@ -188,9 +189,18 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Leafbug" type="Node2D"]
+[node name="Leafbug" type="CharacterBody2D"]
+script = ExtResource("1_h7ym1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_21ery")
 animation = &"move-down"
 autoplay = "move-down"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
