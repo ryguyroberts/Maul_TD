@@ -2032,10 +2032,10 @@ sources/3 = SubResource("TileSetAtlasSource_mvsa2")
 
 [node name="Game" type="Node2D"]
 
-[node name="Game Manager" type="Node2D" parent="."]
+[node name="Game Manager" type="Node" parent="."]
 script = ExtResource("1_w1oa4")
 
-[node name="TileMap" type="TileMap" parent="Game Manager"]
+[node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_n6uog")
 format = 2
@@ -2044,16 +2044,16 @@ layer_0/tile_data = PackedInt32Array(-131072, 327680, 14, -131071, 196608, 14, -
 layer_1/name = "Walls"
 layer_1/tile_data = PackedInt32Array(-131074, 1376256, 29, -131073, 1441792, 29, -196608, 1507328, 29, -196607, 1572864, 29, -262143, 1572864, 28, -262144, 1507328, 28, -196609, 1441792, 28, -196610, 1376256, 28, 786430, 1376256, 25, 720897, 1572864, 25, 720896, 1507328, 25, 786431, 1441792, 25, 786432, 1507328, 26, 851967, 1441792, 26, 786433, 1572864, 26, 851966, 1376256, 26, 917502, 1376256, 29, 851969, 1572864, 29, 851968, 1507328, 29, 917503, 1441792, 29, 589831, 917504, 24, 458759, 917504, 22, 327687, 917504, 22, 196615, 917504, 22, 65543, 917504, 22, -65529, 917504, 22, -196601, 917504, 20, 655352, 786432, 24, 524280, 786432, 22, 393208, 786432, 22, 262136, 786432, 22, 131064, 786432, 22, -8, 786432, 22, -131080, 786432, 20, -262141, 1835008, 12, -196612, 1835008, 14)
 
-[node name="Camera2D" type="Camera2D" parent="Game Manager"]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 125)
 zoom = Vector2(1.1, 1.1)
 
-[node name="Tower" parent="Game Manager" instance=ExtResource("3_7umrj")]
+[node name="Tower" parent="." instance=ExtResource("3_7umrj")]
 position = Vector2(-242, 44)
 
-[node name="MarkerEndZone" type="Marker2D" parent="Game Manager"]
+[node name="MarkerEndZone" type="Marker2D" parent="."]
 position = Vector2(1, 402)
 
-[node name="Leafbug" parent="Game Manager" node_paths=PackedStringArray("marker_end_zone") instance=ExtResource("3_ioe44")]
+[node name="Leafbug" parent="." node_paths=PackedStringArray("marker_end_zone") instance=ExtResource("3_ioe44")]
 position = Vector2(-7, -86)
 marker_end_zone = NodePath("../MarkerEndZone")
