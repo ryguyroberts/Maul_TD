@@ -1,7 +1,7 @@
 [gd_scene load_steps=51 format=3 uid="uid://frfdnvrwv5o7"]
 
 [ext_resource type="Texture2D" uid="uid://bur5vo571q874" path="res://assets/Grass Tileset.png" id="1_61dac"]
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_tic4q"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_w1oa4"]
 [ext_resource type="Texture2D" uid="uid://c7sdtew7jkr08" path="res://assets/Animated water tiles.png" id="2_tmsb1"]
 [ext_resource type="PackedScene" uid="uid://rvqbxbujnia4" path="res://scenes/tower.tscn" id="3_7umrj"]
 [ext_resource type="PackedScene" uid="uid://b86um3075677" path="res://scenes/leafbug.tscn" id="3_ioe44"]
@@ -2031,9 +2031,9 @@ sources/0 = SubResource("TileSetAtlasSource_xdc4f")
 sources/3 = SubResource("TileSetAtlasSource_mvsa2")
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_tic4q")
 
 [node name="Game Manager" type="Node" parent="."]
+script = ExtResource("1_w1oa4")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)

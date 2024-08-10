@@ -1,4 +1,5 @@
-extends Node2D
+extends Node
+
 
 @onready var tile_map = $TileMap
 
@@ -8,5 +9,5 @@ func _ready():
 		
 func _input(event):
 	if Input.is_action_just_pressed("click"):
-		print("Click")
+		print("Click") 
 	
