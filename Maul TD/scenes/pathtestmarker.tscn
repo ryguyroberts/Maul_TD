@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbe8awkqny8xt"]
+
+[ext_resource type="Script" path="res://scripts/pathtestmarker.gd" id="1_xdxdm"]
+
+[node name="PathTestMarker" type="Marker2D"]
+script = ExtResource("1_xdxdm")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

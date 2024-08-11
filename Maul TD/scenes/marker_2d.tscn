@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bbe8awkqny8xt"]
-
-[node name="Marker2D" type="Marker2D"]
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[node name="Timer" type="Timer" parent="."]
