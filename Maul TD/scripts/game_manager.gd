@@ -21,11 +21,9 @@ func _input(event):
 		# Non-Navigation Layer grass tile
 		var atlas_coord : Vector2i = Vector2i(24,5)
 		
-		# 24, 5 
-		
+		# Change cell to non navigation	
 		tile_map.set_cell(ground_layer, tile_mouse_pos, source_id, atlas_coord)
 		
-		#var tile_mouse_pos = tile_map.local_to_map(mouse_pos)
 		
 		#print ("local position", tile_mouse_pos)
 	
