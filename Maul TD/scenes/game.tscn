@@ -2032,6 +2032,7 @@ sources/0 = SubResource("TileSetAtlasSource_xdc4f")
 sources/3 = SubResource("TileSetAtlasSource_mvsa2")
 
 [node name="Game" type="Node2D"]
+position = Vector2(76, -13)
 
 [node name="Game Manager" type="Node2D" parent="."]
 script = ExtResource("1_w1oa4")
@@ -2051,7 +2052,10 @@ position = Vector2(1, 125)
 zoom = Vector2(1.1, 1.1)
 
 [node name="Tower" parent="Game Manager" instance=ExtResource("3_7umrj")]
-position = Vector2(82, 30)
+position = Vector2(64, 247)
+
+[node name="Tower2" parent="Game Manager" instance=ExtResource("3_7umrj")]
+position = Vector2(-82, 78)
 
 [node name="MarkerEndZone" type="Marker2D" parent="Game Manager"]
 position = Vector2(1, 435)

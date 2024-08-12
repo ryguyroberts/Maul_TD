@@ -15,4 +15,4 @@ scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_vroio")
 
 [node name="Bow1" parent="TowerBase" instance=ExtResource("2_mux4l")]
-position = Vector2(0, -12)
+position = Vector2(2, -10)
