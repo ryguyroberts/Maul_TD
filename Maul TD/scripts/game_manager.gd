@@ -6,9 +6,9 @@ extends Node2D
 var ground_layer = 0
 
 		
-func _input(_event):
+func _input(event):
 	# Testing Input
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("_left_click"):
 		
 		# Get mouse position, convert global -> local for cleaner integers
 		var mouse_pos : Vector2 = get_global_mouse_position()
