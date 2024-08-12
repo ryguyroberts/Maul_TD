@@ -6,7 +6,7 @@ extends Node2D
 var ground_layer = 0
 
 		
-func _input(event):
+func _input(_event):
 	# Testing Input
 	if Input.is_action_just_pressed("left_click"):
 		

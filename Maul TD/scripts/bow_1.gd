@@ -5,7 +5,7 @@ var default_rotation = PI / 2
 @onready var animated_sprite : AnimatedSprite2D = $"2DWeaponPivot/AnimatedSprite2D"
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var enemies_in_range: Array[Node2D] = get_overlapping_bodies()
 	
 	if enemies_in_range.size() > 0:

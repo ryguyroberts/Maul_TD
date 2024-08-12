@@ -13,10 +13,10 @@ func makepath():
 	
 	if nav_final_pos == end_zone_global:
 		pass
-		print("Path free")
+		#print("Path free")
 	else:
 		pass
-		print("Path Blocked")
+		#print("Path Blocked")
 	
 
 
